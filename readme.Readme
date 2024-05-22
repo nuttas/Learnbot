@@ -1,0 +1,13 @@
+Install conda
+
+Install pytorch
+
+$ (venv) pip install Flask torch torchvision nltk
+
+$ (venv) python
+>>> import nltk
+>>> nltk.download('punkt')
+
+1.ก่อนใช้งานต้อง $ (venv) python train.py
+
+2.test ใน console. $ (venv) python chat.py
