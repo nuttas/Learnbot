@@ -5,7 +5,6 @@ from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 
 from pythainlp.tokenize import word_tokenize
-from pythainlp.corpus import thai_stopwords
 from pythainlp.util import normalize
 
 def tokenize(sentence):
