@@ -11,3 +11,5 @@ $ (venv) python
 1.ก่อนใช้งานต้อง $ (venv) python train.py
 
 2.test ใน console. $ (venv) python chat.py
+
+3. train  แล้วกดรัน app.py ได้เลย
