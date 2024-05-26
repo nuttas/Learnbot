@@ -22,7 +22,7 @@ def bag_of_words(tokenized_sentence, all_words):
     sentence = ["hello", "how", "are", "you"]
     words = ["hi", "hello", "I", "you", "bye", "thank", "cool"]
     bog   = [  0 ,    1 ,    0 ,   1 ,    0 ,    0 ,      0]
-    
+
     """
     tokenized_sentence = [stem(w) for w in tokenized_sentence]
 
@@ -31,4 +31,3 @@ def bag_of_words(tokenized_sentence, all_words):
         if w in tokenized_sentence:
             bag[idx] = 1.0
     return bag
-

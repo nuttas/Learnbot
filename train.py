@@ -48,11 +48,9 @@ class ChatDataset(Dataset):
         self.x_data = x_train
         self.y_data = y_train
 
-    # support indexing such that dataset[i] can be used to get i-th sample
     def __getitem__(self, index):
         return self.x_data[index], self.y_data[index]
 
-    # we can call len(dataset) to return the size
     def __len__(self):
         return self.n_samples
 
@@ -82,13 +80,10 @@ for epoch in range(num_epochs):
         words = words.to(device)
         labels = labels.to(dtype=torch.long).to(device)
         
-        # Forward pass
         outputs = model(words)
-        # if y would be one-hot, we must apply
-        # labels = torch.max(labels, 1)[1]
+
         loss = criterion(outputs, labels)
         
-        # Backward and optimize
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
