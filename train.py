@@ -6,6 +6,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
+
 from model import NeuralNet
 
 with open('intents.json', 'r', encoding='utf-8') as f:
