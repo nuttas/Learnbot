@@ -1,8 +1,3 @@
-"use client";
-import React, { useEffect } from 'react';
-import "./globals.css";
-import "./appss.js"
-
 class Chatbox {
     constructor() {
         this.args = {
@@ -87,44 +82,5 @@ class Chatbox {
     }
 }
 
-const Chatbot: React.FC = () => {
-    useEffect(() => {
-        const chatbox = new Chatbox();
-        chatbox.display();
-
-        // Cleanup function to remove event listeners if needed
-        return () => {
-            // Clean up code here
-        };
-    }, []); // Empty dependency array means this effect will only run once
-    
-    return (
-        <div className="container">
-            <div className="chatbox">
-                <div className="chatbox__support">
-                    <div className="chatbox__header">
-                        <div className="chatbox__image--header">
-                            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image" />
-                        </div>
-                        <div className="chatbox__content--header">
-                            <h4 className="chatbox__heading--header">Learnbot</h4>
-                            <p className="chatbox__description--header">สวัสดีฉัน Learnbot นะ มีอะไรให้ช่วยมั้ย?</p>
-                        </div>
-                    </div>
-                    <div className="chatbox__messages">
-                        <div></div>
-                    </div>
-                    <div className="chatbox__footer">
-                        <input type="text" placeholder="เขียนข้อความซักหน่อยสิ..." />
-                        <button className="chatbox__send--footer send__button"><span className="material-symbols-outlined">send</span></button>
-                    </div>
-                </div>
-                <div className="chatbox__button">
-                    <button><img src="./images/chatbox-icon.svg" alt="icon" /></button>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-export default Chatbot;
+const chatbox = new Chatbox();
+chatbox.display();
