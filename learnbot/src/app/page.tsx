@@ -1,14 +1,23 @@
 "use client";
 import React, { useEffect } from 'react';
 import "./globals.css";
-import "./appss.js"
 
 class Chatbox {
+    
     constructor() {
         this.args = {
-            openButton: document.querySelector('.chatbox__button button'),
-            chatBox: document.querySelector('.chatbox__support'),
-            sendButton: document.querySelector('.send__button')
+            openButton: null,
+            chatBox: null,
+            sendButton: null
+        };
+
+        // Check if document is defined
+        if (typeof document !== 'undefined') {
+            this.args = {
+                openButton: document.querySelector('.chatbox__button button'),
+                chatBox: document.querySelector('.chatbox__support'),
+                sendButton: document.querySelector('.send__button')
+            };
         }
 
         this.state = false;
